@@ -22,8 +22,8 @@ spec:
       matchLabels:
         arch: arm64
         os: linux
-    uri: https://github.com/karmada-io/karmada/releases/download/v0.10.1/kubectl-karmada-linux-arm64.tgz
-    sha256: 2cbb061d3119aac29a6847c002035f4f4001ba8cfe145311385d74adaaed7bd4
+    uri: https://github.com/karmada-io/karmada/releases/download/v1.19.1/kubectl-karmada-linux-arm64.tgz
+    sha256: 29b8ce38a4b761998340d4759dd1f6186acf4b3c3347667bdb14815d08caafbf
   - bin: kubectl-karmada
     files:
     - from: kubectl-karmada
@@ -34,8 +34,8 @@ spec:
       matchLabels:
         arch: arm64
         os: darwin
-    uri: https://github.com/karmada-io/karmada/releases/download/v0.10.1/kubectl-karmada-darwin-arm64.tgz
-    sha256: ae290ebaf353a8bddef56635bfee9c6220d25041283c8f79878c0bf96a98d0c3
+    uri: https://github.com/karmada-io/karmada/releases/download/v1.19.1/kubectl-karmada-darwin-arm64.tgz
+    sha256: ebd3fe15004441e48d078dc7a8809fc7338c2fcc069dcf60f13d86e6e1206672
   - bin: kubectl-karmada
     files:
     - from: kubectl-karmada
@@ -46,8 +46,8 @@ spec:
       matchLabels:
         arch: amd64
         os: linux
-    uri: https://github.com/karmada-io/karmada/releases/download/v0.10.1/kubectl-karmada-linux-amd64.tgz
-    sha256: 8e58b5316023f263026bc663e5f88dc0173fd3c3354f934e76d504d559d16a43
+    uri: https://github.com/karmada-io/karmada/releases/download/v1.19.1/kubectl-karmada-linux-amd64.tgz
+    sha256: 927f15ee06052f1cfeef5eac9f08173559a12072ac6412d0929ed9b12c7b01fc
   - bin: kubectl-karmada
     files:
     - from: kubectl-karmada
@@ -58,7 +58,7 @@ spec:
       matchLabels:
         arch: amd64
         os: darwin
-    uri: https://github.com/karmada-io/karmada/releases/download/v0.10.1/kubectl-karmada-darwin-amd64.tgz
-    sha256: 9c50407ed48f85ab381e3f0f29b5f75e4cb58674b3d17b70d4ac77f039493c62
+    uri: https://github.com/karmada-io/karmada/releases/download/v1.19.1/kubectl-karmada-darwin-amd64.tgz
+    sha256: cdb5768278fde0b7b10eba5d1971bb4172e7cee0b3d825380755d1996b3304b6
   shortDescription: Manage clusters with Karmada federation.
-  version: v0.10.1
+  version: v1.19.1

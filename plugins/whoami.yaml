@@ -3,15 +3,25 @@ kind: Plugin
 metadata:
   name: whoami
 spec:
-  version: v0.0.37
+  version: v0.0.48
   homepage: https://github.com/rajatjindal/kubectl-whoami
   platforms:
   - selector:
       matchLabels:
         os: darwin
         arch: amd64
-    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.37/kubectl-whoami_v0.0.37_darwin_amd64.tar.gz
-    sha256: 444eb6d1abea6ee5dca1c052a917751c989a39704548b60fdc34761123d07512
+    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.48/kubectl-whoami_v0.0.48_darwin_amd64.tar.gz
+    sha256: d820589b1c97008cf554a83625ae61a5d1dc6a8f8b72ed122adce953e571d228
+    files:
+    - from: "*"
+      to: "."
+    bin: kubectl-whoami
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.48/kubectl-whoami_v0.0.48_darwin_arm64.tar.gz
+    sha256: 15e395eeda25e79005ffbfa55b4cbf9a1b0d344984aa5ec040ba329662d0f39e
     files:
     - from: "*"
       to: "."
@@ -20,12 +30,32 @@ spec:
       matchLabels:
         os: linux
         arch: amd64
-    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.37/kubectl-whoami_v0.0.37_linux_amd64.tar.gz
-    sha256: ff8a6fc5bb0e071c3aa8cbd6ccb069fc5b0b5d85833386062403a473af3945db
+    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.48/kubectl-whoami_v0.0.48_linux_amd64.tar.gz
+    sha256: e4fc36490d91fb5e55b7392a4ecd4fa13cc9a50ae0d48b6a3e1f8cbef417b49e
     files:
     - from: "*"
       to: "."
     bin: kubectl-whoami
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.48/kubectl-whoami_v0.0.48_linux_arm64.tar.gz
+    sha256: 8233f00a61009a92ee43d128077c5c4073163ca3558237a70d607cebc324c3b9
+    files:
+    - from: "*"
+      to: "."
+    bin: kubectl-whoami
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://github.com/rajatjindal/kubectl-whoami/releases/download/v0.0.48/kubectl-whoami_v0.0.48_windows_amd64.tar.gz
+    sha256: 511acd864222a12ba109ddfa5aae7c5eeefa2d231b844a8caad1dfd05bf06ec9
+    files:
+    - from: "*"
+      to: "."
+    bin: kubectl-whoami.exe
   shortDescription: Show the subject that's currently authenticated as.
   description: |
     This plugin show the subject that's currently authenticated as.

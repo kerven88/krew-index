@@ -1,0 +1,48 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: aws-auth
+spec:
+  version: v0.7.0
+  homepage: https://github.com/keikoproj/aws-auth
+  shortDescription: Manage aws-auth ConfigMap
+  description: |
+    This plugin allows upserting and removing IAM mappings from the
+    aws-auth configmap in order to manage access to EKS clusters for
+    roles or users.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://github.com/keikoproj/aws-auth/releases/download/v0.7.0/aws-auth_v0.7.0_darwin_amd64.tar.gz
+    sha256: 47b1b3458c2b1bd99125a7e38a0a93959fea073bf9b6e8d53722bbdef9e96bc0
+    bin: aws-auth
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/keikoproj/aws-auth/releases/download/v0.7.0/aws-auth_v0.7.0_darwin_arm64.tar.gz
+    sha256: 3d4331000605cd281e31a01806124a4e04a4c5d856502659ecc1055f22315317
+    bin: aws-auth
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://github.com/keikoproj/aws-auth/releases/download/v0.7.0/aws-auth_v0.7.0_linux_amd64.tar.gz
+    sha256: 4dd4a0698b352c44b342acbf468ea1c3eba6c8104b5d6ff3d62a8e959e1b958d
+    bin: aws-auth
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://github.com/keikoproj/aws-auth/releases/download/v0.7.0/aws-auth_v0.7.0_linux_arm64.tar.gz
+    sha256: 4f503e55ad3350b750d6ccbb3249be52f9518d251df3ba46341ce2b80cb0eb1d
+    bin: aws-auth
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://github.com/keikoproj/aws-auth/releases/download/v0.7.0/aws-auth_v0.7.0_windows_amd64.tar.gz
+    sha256: 24bb960e2f69ee83503214ce899f0b6c6a8201bbcb41d1bcdd212bb5c13135cd
+    bin: aws-auth.exe

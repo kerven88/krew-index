@@ -1,0 +1,59 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: zombie
+spec:
+  version: v0.1.6
+  homepage: https://github.com/4ugane/k8s-zombie
+  shortDescription: Find orphaned resources burning budget
+  caveats: |
+    Requires a valid kubeconfig. See https://github.com/4ugane/k8s-zombie
+    for full documentation.
+  description: |
+    k8s-zombie scans a cluster for orphaned resources (unattached PVCs,
+    zero-endpoint Services, idle Deployments, stale HPAs, and more) and
+    reports them with AWS cost estimates. Read-only — never deletes or
+    modifies anything.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://github.com/4ugane/k8s-zombie/releases/download/v0.1.6/kubectl-zombie_v0.1.6_darwin_amd64.tar.gz
+    sha256: 27d1c861db59593237581de616708cd1e982ffbbc78363b9bef952603e3ce03d
+    bin: kubectl-zombie
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/4ugane/k8s-zombie/releases/download/v0.1.6/kubectl-zombie_v0.1.6_darwin_arm64.tar.gz
+    sha256: c46b67d0c648895ed0cd5761368aee07cce465d7759eae3f6b12d6bded824f6c
+    bin: kubectl-zombie
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://github.com/4ugane/k8s-zombie/releases/download/v0.1.6/kubectl-zombie_v0.1.6_linux_amd64.tar.gz
+    sha256: 2778f1181a53acce55218a5950c97ae043d7e1d341d91c07c9a4ffbb726d365a
+    bin: kubectl-zombie
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://github.com/4ugane/k8s-zombie/releases/download/v0.1.6/kubectl-zombie_v0.1.6_linux_arm64.tar.gz
+    sha256: ba1427d9b3bdf5f4b57f72496556530b29de80a80dc6d43940efaa72199166ee
+    bin: kubectl-zombie
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://github.com/4ugane/k8s-zombie/releases/download/v0.1.6/kubectl-zombie_v0.1.6_windows_amd64.zip
+    sha256: 8b60046537305455e17145eb71fc4f87c9d4028136d2ce0d8c62f4e8c1b1a71c
+    bin: kubectl-zombie.exe
+  - selector:
+      matchLabels:
+        os: windows
+        arch: arm64
+    uri: https://github.com/4ugane/k8s-zombie/releases/download/v0.1.6/kubectl-zombie_v0.1.6_windows_arm64.zip
+    sha256: d17f428380531903f4e504a653848c1e485e5ae28690823cccaa26aa6d23228e
+    bin: kubectl-zombie.exe

@@ -3,7 +3,7 @@ kind: Plugin
 metadata:
   name: images
 spec:
-  version: v0.3.6
+  version: v0.6.5
   homepage: https://github.com/chenjiandongx/kubectl-images
   shortDescription: Show container images used in the cluster.
   description: |
@@ -20,8 +20,8 @@ spec:
         to: .
       - from: LICENSE
         to: .
-    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.3.6/kubectl-images_darwin_amd64.tar.gz
-    sha256: 24e2078492e440837d8990dff921ea1763592515698929e5a2577f3e0efc97ca
+    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.6.5/kubectl-images_darwin_amd64.tar.gz
+    sha256: 96fc3daad14a7e6b1abf6dcde39eea6eb259deee4e79101f093418f67358c50e
     bin: kubectl-images
   - selector:
       matchLabels:
@@ -32,8 +32,8 @@ spec:
         to: .
       - from: LICENSE
         to: .
-    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.3.6/kubectl-images_darwin_arm64.tar.gz
-    sha256: 3baaeba016694a11f9c52ccdb613babbf520cd736a93a6603d3ab5b5b4fbf15c
+    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.6.5/kubectl-images_darwin_arm64.tar.gz
+    sha256: a621fd63e4af013c6433fdf8c7521f1d5d7a9f2077bcbb15625b3edd6081cbe1
     bin: kubectl-images
   - selector:
       matchLabels:
@@ -44,8 +44,8 @@ spec:
         to: .
       - from: LICENSE
         to: .
-    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.3.6/kubectl-images_linux_amd64.tar.gz
-    sha256: 440b06f404128e2f7521f4562811ae1ee4030f2ca43a55278e58051b22e1edf0
+    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.6.5/kubectl-images_linux_amd64.tar.gz
+    sha256: 2dfd8517d062a1c5b85e510f4e8bb9016c3bcf1550b4fc67a35ca96076c91c37
     bin: kubectl-images
   - selector:
       matchLabels:
@@ -56,8 +56,8 @@ spec:
         to: .
       - from: LICENSE
         to: .
-    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.3.6/kubectl-images_linux_arm64.tar.gz
-    sha256: ac547ed7d4ca40f42a86a1b1abd5ce58af401d48d2ca53b8ced4f4abcdbdf0d3
+    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.6.5/kubectl-images_linux_arm64.tar.gz
+    sha256: 306aab0b155bbba267b4886b5ca613fd4bd0ddc3a5390aa5ebe616e56bbed848
     bin: kubectl-images
   - selector:
       matchLabels:
@@ -68,8 +68,8 @@ spec:
         to: .
       - from: LICENSE
         to: .
-    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.3.6/kubectl-images_linux_arm.tar.gz
-    sha256: 0a13fdf9e48394f411da8b45902ec972f4aa7ee62693d55f30e96bd307a030f2
+    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.6.5/kubectl-images_linux_arm.tar.gz
+    sha256: 40ec1ca1aa020bd4cccb747180cfdd65f5d359c8e56cb2b627381b0c0f8be8b0
     bin: kubectl-images
   - selector:
       matchLabels:
@@ -80,6 +80,6 @@ spec:
         to: .
       - from: LICENSE
         to: .
-    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.3.6/kubectl-images_windows_amd64.tar.gz
-    sha256: c436bec67b2e83d8c9d617ae3c0d6b8650e7d151397d1e755e52db615a944308
+    uri: https://github.com/chenjiandongx/kubectl-images/releases/download/v0.6.5/kubectl-images_windows_amd64.tar.gz
+    sha256: 1d4e313f485f97de11bf6e3b8625cb1797e3a31b1e18580fc8482dab73870782
     bin: kubectl-images.exe

@@ -7,7 +7,7 @@ spec:
   shortDescription: "Wrap multiple kubectl calls to Clusternet"
   description: |
     A plugin to interact with Clusternet.
-  version: v0.4.0
+  version: v0.8.1
   caveats: |
     For additional options:
       $ kubectl clusternet --help
@@ -17,8 +17,8 @@ spec:
       matchLabels:
         os: darwin
         arch: amd64
-    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.4.0/kubectl-clusternet_darwin_amd64.tar.gz
-    sha256: fcab5409bb05651c282c80a09178fc4c9caec2e34cb41c997dbf2aec3579df5e
+    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.8.1/kubectl-clusternet_darwin_amd64.tar.gz
+    sha256: a7e0e7f52f808de80bf29ecffab00e3ddddd8b8317acb6f0ebddffb7db2d711a
     files:
     - from: "./kubectl-clusternet"
       to: "."
@@ -29,8 +29,8 @@ spec:
       matchLabels:
         os: darwin
         arch: arm64
-    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.4.0/kubectl-clusternet_darwin_arm64.tar.gz
-    sha256: 9b2f64d60f4b1814f87e0a4be99597dfa87c666303667473683f089329c412b3
+    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.8.1/kubectl-clusternet_darwin_arm64.tar.gz
+    sha256: 2158d3d0bb00870a03fcd370ae6fb69110332df4061c71af0592691ba74f3d53
     files:
     - from: "./kubectl-clusternet"
       to: "."
@@ -41,8 +41,8 @@ spec:
       matchLabels:
         os: linux
         arch: amd64
-    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.4.0/kubectl-clusternet_linux_amd64.tar.gz
-    sha256: d50c4a134b31d655d14b229abe4d323a1c4dfb644876a9da913853a77dbda1d7
+    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.8.1/kubectl-clusternet_linux_amd64.tar.gz
+    sha256: 5cf37cf698881500f4aa2c47a54dd724657ee7c4e9ad017fdaf4c2b1db9df78b
     files:
     - from: "./kubectl-clusternet"
       to: "."
@@ -53,8 +53,8 @@ spec:
       matchLabels:
         os: linux
         arch: arm64
-    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.4.0/kubectl-clusternet_linux_arm64.tar.gz
-    sha256: 4f5df5e8d46813cb8fcea90325e5fabddf34a59348661ea566a96988d6af0272
+    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.8.1/kubectl-clusternet_linux_arm64.tar.gz
+    sha256: 1746e5cabc79c65173fb4ff16bf3920a0471c703c27e9d0b76714e4fe9bfe704
     files:
     - from: "./kubectl-clusternet"
       to: "."
@@ -65,8 +65,8 @@ spec:
       matchLabels:
         os: linux
         arch: arm
-    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.4.0/kubectl-clusternet_linux_armv6.tar.gz
-    sha256: d5ac18bdc8ececf0c12e9fb798e10f554eb3e0c11ff25ee730c432a1b4e853e1
+    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.8.1/kubectl-clusternet_linux_armv6.tar.gz
+    sha256: 2967c60002cff94b738416fbec5d813475e68e2693298f2326b6b7bc09999f6a
     files:
     - from: "./kubectl-clusternet"
       to: "."
@@ -77,8 +77,8 @@ spec:
       matchLabels:
         os: linux
         arch: 386
-    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.4.0/kubectl-clusternet_linux_i386.tar.gz
-    sha256: 9a8a02523a1994ea9bbadd21edc5b7b678aad16420c0d6e2bade7e0d6408c1f7
+    uri: https://github.com/clusternet/kubectl-clusternet/releases/download/v0.8.1/kubectl-clusternet_linux_i386.tar.gz
+    sha256: d09e9c88fb097ee3c72b40ffc0b8fe1c13963f4be3e8daa1af353e88132671a6
     files:
     - from: "./kubectl-clusternet"
       to: "."

@@ -1,0 +1,77 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: crd-wizard
+spec:
+  version: v0.2.2
+  homepage: https://github.com/pehlicd/crd-wizard
+  shortDescription: A tool to explore Kubernetes CR(D)s via a TUI or web interface.
+  description: |
+    crd-wizard is a powerful kubernetes plugin that provides two ways to
+    explore Custom Resource Definitions (CRDs) and Custom Resources (CRs) in your Kubernetes cluster:
+
+      - A beautiful and interactive Terminal User Interface (TUI)
+      - A simple web server providing a JSON API for CRDs
+
+    Read more documentation at: https://github.com/pehlicd/crd-wizard
+  platforms:
+  - bin: kubectl-crd_wizard
+    uri: https://github.com/pehlicd/crd-wizard/releases/download/v0.2.2/kubectl-crd_wizard_v0.2.2_darwin_arm64.tar.gz
+    sha256: 925b4904b072c7808aad4ea50b45af309cbda3912475184c2ef827b91a631b70
+    files:
+      - from: LICENSE
+        to: .
+      - from: kubectl-crd_wizard
+        to: .
+    selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+  - bin: kubectl-crd_wizard
+    uri: https://github.com/pehlicd/crd-wizard/releases/download/v0.2.2/kubectl-crd_wizard_v0.2.2_darwin_amd64.tar.gz
+    sha256: 8b4057014910c6bfb08886a387864bdc7c7efb37205e85b038ae4b66e9db1e97
+    files:
+      - from: LICENSE
+        to: .
+      - from: kubectl-crd_wizard
+        to: .
+    selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+  - bin: kubectl-crd_wizard
+    uri: https://github.com/pehlicd/crd-wizard/releases/download/v0.2.2/kubectl-crd_wizard_v0.2.2_linux_arm64.tar.gz
+    sha256: db846f28682c52bd167ac4c297eb99cab6185a73840eb9ec7f846d233ab5cf30
+    files:
+      - from: LICENSE
+        to: .
+      - from: kubectl-crd_wizard
+        to: .
+    selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+  - bin: kubectl-crd_wizard
+    uri: https://github.com/pehlicd/crd-wizard/releases/download/v0.2.2/kubectl-crd_wizard_v0.2.2_linux_amd64.tar.gz
+    sha256: 1ac29014b293942c1c56a7fd1beda64050e34f9e261cce9ed3339405e35d8783
+    files:
+      - from: LICENSE
+        to: .
+      - from: kubectl-crd_wizard
+        to: .
+    selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+  - bin: kubectl-crd_wizard.exe
+    uri: https://github.com/pehlicd/crd-wizard/releases/download/v0.2.2/kubectl-crd_wizard_v0.2.2_windows_amd64.tar.gz
+    sha256: 09596f923637b0ef814b0843db5385da76d5f6ead8053cff0eb647075ff5daf6
+    files:
+      - from: LICENSE
+        to: .
+      - from: kubectl-crd_wizard.exe
+        to: .
+    selector:
+      matchLabels:
+        os: windows
+        arch: amd64

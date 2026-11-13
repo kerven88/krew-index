@@ -1,0 +1,43 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: openunison-cli
+spec:
+  version: v1.5.2
+  homepage: https://github.com/OpenUnison/openunison-cli
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://nexus.tremolo.io/repository/openunison-cli/openunison-cli-v1.5.2-macos.zip
+    sha256: e366736cc314830269c7b28ba6064847f9af741e773c33684b967abe1026057a
+    bin: openunison-cli
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://nexus.tremolo.io/repository/openunison-cli/openunison-cli-v1.5.2-macos-arm64.zip
+    sha256: 809f8388e6d25d6eb6efc418358cdbbf271b885ee73f55e06dee65bb30e3c859
+    bin: openunison-cli
+  - selector:
+      matchLabels:
+        os: linux
+    uri: https://nexus.tremolo.io/repository/openunison-cli/openunison-cli-v1.5.2-linux.zip
+    sha256: 3174d9b9552b33ba585484b11bb52c3c436088eaa396d879fc81e56e560121b8
+    bin: openunison-cli
+  - selector:
+      matchLabels:
+        os: windows
+    uri: https://nexus.tremolo.io/repository/openunison-cli/openunison-cli-v1.5.2-win.zip
+    sha256: 30a336e7f4b125a7789787b5e4620114d1db7a12c28e69e8b2dfa077a1a5e465
+    bin: openunison-cli.exe
+  shortDescription: "Login to a kubernetes cluster via OpenUnison"
+  description: |
+    kubectl exec plugin that will launch a browser to authenticate you 
+    without having a pre-existing kubectl configuration file.  The first
+    time you execute this plugin, include the host of your OpenUnison 
+    server and the plugin will launch a browser and authenticate you.  As
+    you work with kubectl it will keep your short-lived tokens updated and
+    if they expire, automatically re-launch a browser window to authenticate
+    you.

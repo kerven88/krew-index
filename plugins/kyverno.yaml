@@ -3,15 +3,15 @@ kind: Plugin
 metadata:
   name: kyverno
 spec:
-  version: v1.5.2
+  version: v1.19.2
   homepage: https://github.com/kyverno/kyverno
   platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/kyverno/kyverno/releases/download/v1.5.2/kyverno-cli_v1.5.2_linux_x86_64.tar.gz
-      sha256: 60fcdc4fbf1f2826d3687c56611dad229b5230e7e8d7d0e7ba629eeb97259457
+      uri: https://github.com/kyverno/kyverno/releases/download/v1.19.2/kyverno-cli_v1.19.2_linux_x86_64.tar.gz
+      sha256: 357eaf1df8bc24ddd5a73979fadeaae6a032e8710f11af264229756e4956bf4a
       files:
         - from: kyverno
           to: .
@@ -22,8 +22,20 @@ spec:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/kyverno/kyverno/releases/download/v1.5.2/kyverno-cli_v1.5.2_darwin_x86_64.tar.gz
-      sha256: d8d4620217fade0d7aa07f89dfdd7fbd1cad3d59231f4c80f967938cab95b0f0
+      uri: https://github.com/kyverno/kyverno/releases/download/v1.19.2/kyverno-cli_v1.19.2_darwin_x86_64.tar.gz
+      sha256: b645654ab8e65bd4aa64de9228e274b388bab19b3404a4e9af70174b3d5ad230
+      files:
+        - from: kyverno
+          to: .
+        - from: LICENSE
+          to: .
+      bin: kyverno
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/kyverno/kyverno/releases/download/v1.19.2/kyverno-cli_v1.19.2_darwin_arm64.tar.gz
+      sha256: 7915c03c613c22363a100adb3da8d06f2e2626d9d21a98b97f921795ffdc536f
       files:
         - from: kyverno
           to: .
@@ -34,8 +46,8 @@ spec:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/kyverno/kyverno/releases/download/v1.5.2/kyverno-cli_v1.5.2_windows_x86_64.zip
-      sha256: 52539dccd1740ab0df771a2f654cc0bf1d082917c2fb60dcd6bb79aaf11dd881
+      uri: https://github.com/kyverno/kyverno/releases/download/v1.19.2/kyverno-cli_v1.19.2_windows_x86_64.zip
+      sha256: c787cd56d2c2571e5470b1d070fff851c05d104513fcf5cb1652021bb187a1f6
       files:
         - from: kyverno.exe
           to: .

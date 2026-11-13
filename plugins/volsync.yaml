@@ -1,0 +1,72 @@
+---
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: volsync
+spec:
+  version: v0.17.0
+  homepage: https://github.com/backube/volsync
+  shortDescription: "Manage replication with the VolSync operator"
+  description: |
+    This plugin provides a set of commands to interact with the VolSync
+    operator.
+
+    It provides an easy method to perform several common data replication
+    workflows without directly creating/manipulating VolSync's CRs.
+  platforms:
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    # This URL requires the artifact to be added to the release page as an
+    # "Asset"
+    uri: https://github.com/backube/volsync/releases/download/v0.17.0/kubectl-volsync-linux-amd64.tar.gz
+    sha256: dd77637ac2342a390222b75513f4cb57d377ee81646408f111ba0de767a5e492
+    files:
+    - from: "./kubectl-volsync"
+      to: "."
+    - from: "LICENSE"
+      to: "."
+    bin: kubectl-volsync
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    # This URL requires the artifact to be added to the release page as an
+    # "Asset"
+    uri: https://github.com/backube/volsync/releases/download/v0.17.0/kubectl-volsync-linux-arm64.tar.gz
+    sha256: ebc22662ee549c1517d5f9868c22fbe1cf178fe54bd5f43e1e1e85e237f733cd
+    files:
+    - from: "./kubectl-volsync"
+      to: "."
+    - from: "LICENSE"
+      to: "."
+    bin: kubectl-volsync
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    # This URL requires the artifact to be added to the release page as an
+    # "Asset"
+    uri: https://github.com/backube/volsync/releases/download/v0.17.0/kubectl-volsync-darwin-amd64.tar.gz
+    sha256: a508ac999eed4b6ac306b2d2aa939a80ba8c40e499023e15da91bbb2cea24b42
+    files:
+    - from: "./kubectl-volsync"
+      to: "."
+    - from: "LICENSE"
+      to: "."
+    bin: kubectl-volsync
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    # This URL requires the artifact to be added to the release page as an
+    # "Asset"
+    uri: https://github.com/backube/volsync/releases/download/v0.17.0/kubectl-volsync-darwin-arm64.tar.gz
+    sha256: 1322700e0ddd2e4dae00221de1a79d7006d39d2fa2c209382539b2ca3695c138
+    files:
+    - from: "./kubectl-volsync"
+      to: "."
+    - from: "LICENSE"
+      to: "."
+    bin: kubectl-volsync

@@ -1,0 +1,84 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: kpil
+spec:
+  version: v0.2.0
+  homepage: https://github.com/qjoly/kpil
+  shortDescription: Run Copilot CLI with a scoped kubeconfig
+  description: |
+    kpil provisions a temporary, read-only Kubernetes ServiceAccount
+    (secrets excluded), generates a short-lived kubeconfig, and launches
+    the GitHub Copilot CLI inside an isolated container.
+    All RBAC resources and the kubeconfig are deleted on exit.
+
+    Requires Docker or Podman and a GH_TOKEN with copilot access.
+  caveats: |
+    GH_TOKEN must be set before running:
+      export GH_TOKEN=github_pat_xxxxxxxxxxxx
+    Docker or Podman must be running locally.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/qjoly/kpil/releases/download/v0.2.0/kpil_0.2.0_darwin_arm64.tar.gz
+    sha256: 232b242b98a6aa9f143d1a5882378d4123eee6460144e5d4dafea5359e73117c
+    files:
+    - from: kpil
+      to: .
+    - from: LICENSE
+      to: .
+    bin: kpil
+
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://github.com/qjoly/kpil/releases/download/v0.2.0/kpil_0.2.0_darwin_amd64.tar.gz
+    sha256: f3e43d5f2c992cb9167b09bb9470ab26a0f14d019f371925dcaa948c12d54320
+    files:
+    - from: kpil
+      to: .
+    - from: LICENSE
+      to: .
+    bin: kpil
+
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://github.com/qjoly/kpil/releases/download/v0.2.0/kpil_0.2.0_linux_arm64.tar.gz
+    sha256: 4490cb5fcc2d7a0fa450c6a901d3a635efee0cc32dfb86563ff8ad9c536d044b
+    files:
+    - from: kpil
+      to: .
+    - from: LICENSE
+      to: .
+    bin: kpil
+
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://github.com/qjoly/kpil/releases/download/v0.2.0/kpil_0.2.0_linux_amd64.tar.gz
+    sha256: dede71902a855ecae012c6e0845eac8ab81f938891905a110f34278c232a6014
+    files:
+    - from: kpil
+      to: .
+    - from: LICENSE
+      to: .
+    bin: kpil
+
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://github.com/qjoly/kpil/releases/download/v0.2.0/kpil_0.2.0_windows_amd64.zip
+    sha256: 23c427ecb324c4ce2c3da05fddba65f5d2697d35bc8b0874938ff1237e9de88e
+    files:
+    - from: kpil.exe
+      to: .
+    - from: LICENSE
+      to: .
+    bin: kpil.exe

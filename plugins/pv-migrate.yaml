@@ -3,50 +3,50 @@ kind: Plugin
 metadata:
   name: pv-migrate
 spec:
-  version: v0.8.1
+  version: v3.7.0
   homepage: https://github.com/utkuozdemir/pv-migrate
   platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v0.8.1/pv-migrate_v0.8.1_linux_x86_64.tar.gz
-      sha256: 95e6179802caf55dd686f996e5f0b62a39509c7e2577a58496da45376da8cacc
+      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v3.7.0/pv-migrate_v3.7.0_linux_x86_64.tar.gz
+      sha256: 5e33342777786f07161d8629772cc46baf8a696de641d2d1537f4b9adb8bcdf1
       bin: pv-migrate
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v0.8.1/pv-migrate_v0.8.1_linux_arm64.tar.gz
-      sha256: 7f90150882d366baf5f43a0e4601219794931839ec376e5e427efc9362deb104
+      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v3.7.0/pv-migrate_v3.7.0_linux_arm64.tar.gz
+      sha256: 996ea63b4f91b4750e10aab6604803c6beadab9d2ca97a283cd7f39e299f1d3d
       bin: pv-migrate
     - selector:
         matchLabels:
           os: linux
           arch: arm
-      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v0.8.1/pv-migrate_v0.8.1_linux_armv7.tar.gz
-      sha256: 76130b3fe554c86b3347594d07f7cb5e101f1cbeec2055e90a31e2e4c4729b9f
+      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v3.7.0/pv-migrate_v3.7.0_linux_armv7.tar.gz
+      sha256: b7a4af4a7e93bf53c9404596d8f5a43dbb4c58a8dda5e223b4cb129d999266fc
       bin: pv-migrate
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v0.8.1/pv-migrate_v0.8.1_darwin_x86_64.tar.gz
-      sha256: d806ee8c916eddbf973613632cb6a521b5f3370a764feaa49e6f8593955e2123
+      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v3.7.0/pv-migrate_v3.7.0_darwin_x86_64.tar.gz
+      sha256: 3421338537876b4241eb7e85632699d95fe1edae6c06980e4b61015f2154f335
       bin: pv-migrate
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v0.8.1/pv-migrate_v0.8.1_darwin_arm64.tar.gz
-      sha256: 1b9365e22e39e99d90b2d2c330cd7d9dcbee5833e27bb4cbade6791a689a9bea
+      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v3.7.0/pv-migrate_v3.7.0_darwin_arm64.tar.gz
+      sha256: 5ef6de5e1deefb36b5f312185fda00cd704a766c353265ce129eceb57e2dbf93
       bin: pv-migrate
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v0.8.1/pv-migrate_v0.8.1_windows_x86_64.zip
-      sha256: 4ce5c61aee68687ad5f79b9fe3ef7fe0c76140d21cace21261ebc998035156e4
+      uri: https://github.com/utkuozdemir/pv-migrate/releases/download/v3.7.0/pv-migrate_v3.7.0_windows_x86_64.zip
+      sha256: fff4765246b96505be7ff23e7840fa4c68cd34991e50e061ca71c7e247e5957f
       bin: pv-migrate.exe
   shortDescription: Migrate data across persistent volumes
   description: |

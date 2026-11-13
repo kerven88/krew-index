@@ -3,7 +3,7 @@ kind: Plugin
 metadata:
   name: gs
 spec:
-  version: v1.58.0
+  version: v6.0.4
   homepage: https://github.com/giantswarm/kubectl-gs
   shortDescription: Handle custom resources with Giant Swarm
   description: |
@@ -14,39 +14,41 @@ spec:
       matchLabels:
         os: darwin
         arch: amd64
-    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v1.58.0/kubectl-gs-v1.58.0-darwin-amd64.tar.gz
-    sha256: 340d252ffe0e90f7bd3f66bd58ac844966f8837f8e18cdd48bf6d26fb1ec3e0f
-    files:
-    - from: ./kubectl-gs-*/*
-      to: .
-    bin: ./kubectl-gs
+    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v6.0.4/kubectl-gs-v6.0.4-darwin-amd64.tar.gz
+    sha256: f02f60e7364ff253b08c404a5a04a2403c79d2f93ff833e47ba9ecf44cb2f173
+    bin: kubectl-gs
   - selector:
       matchLabels:
         os: darwin
         arch: arm64
-    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v1.58.0/kubectl-gs-v1.58.0-darwin-arm64.tar.gz
-    sha256: 3fd46ddc41986d55ea5e7700c177672d1c2b31cd56ffbc58762bbb8335fbb83a
-    files:
-    - from: ./kubectl-gs-*/*
-      to: .
-    bin: ./kubectl-gs
+    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v6.0.4/kubectl-gs-v6.0.4-darwin-arm64.tar.gz
+    sha256: 8e68133ef8eabc6b714c96c974c598c2c41385177c8c3d28d29b015becce3b9f
+    bin: kubectl-gs
   - selector:
       matchLabels:
         os: linux
         arch: amd64
-    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v1.58.0/kubectl-gs-v1.58.0-linux-amd64.tar.gz
-    sha256: 9760cba7748bfeae9444fa66b412fcb2a9ccb8614d4e5be47b16fd9d3ab0416b
-    files:
-    - from: ./kubectl-gs-*/*
-      to: .
-    bin: ./kubectl-gs
+    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v6.0.4/kubectl-gs-v6.0.4-linux-amd64.tar.gz
+    sha256: 3c388826f2962b345041e2862927d2e480fb4e2077e9933fc028039ee6bfc9ad
+    bin: kubectl-gs
   - selector:
       matchLabels:
         os: linux
         arch: arm64
-    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v1.58.0/kubectl-gs-v1.58.0-linux-arm64.tar.gz
-    sha256: 263fe36cb66dad3867721a882e58df10e8cff8ed35c4c3dafa36fdcf5e8dd6d6
-    files:
-    - from: ./kubectl-gs-*/*
-      to: .
-    bin: ./kubectl-gs
+    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v6.0.4/kubectl-gs-v6.0.4-linux-arm64.tar.gz
+    sha256: d57aa4ff0b174ef9a082e2ebd195290b1b4e76a7d5801fa1465c38d3f40d7536
+    bin: kubectl-gs
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v6.0.4/kubectl-gs-v6.0.4-windows-amd64.tar.gz
+    sha256: abcaa8129ad2b75a6804ae6b19cb14bf7f2520d659e2ba62df1c5c303a441135
+    bin: kubectl-gs.exe
+  - selector:
+      matchLabels:
+        os: windows
+        arch: arm64
+    uri: https://github.com/giantswarm/kubectl-gs/releases/download/v6.0.4/kubectl-gs-v6.0.4-windows-arm64.tar.gz
+    sha256: a7469f718ecd1c12ed2b95e5cb37d3f7c3fcf8d02e96474d0ea62dfc0f4b1576
+    bin: kubectl-gs.exe

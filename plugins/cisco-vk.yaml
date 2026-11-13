@@ -1,0 +1,45 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: cisco-vk
+spec:
+  version: "v2026.11.1"
+  homepage: https://github.com/cisco-open/cisco-virtual-kubelet
+  shortDescription: Run read-only IOS-XE commands through CVK
+  description: |
+    Runs read-only IOS-XE commands through a Cisco Virtual Kubelet
+    per-device pod. The plugin discovers the provider pod and uses
+    kubectl port-forward to reach its local administrative endpoint.
+  caveats: |
+    kubectl must be installed and available on PATH. The active Kubernetes
+    identity needs permission to get/list pods and create pods/portforward in
+    the target namespace. exec currently supports per-device IOS-XE deployments.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: "https://github.com/cisco-open/cisco-virtual-kubelet/releases/download/v2026.11.1/kubectl-ciscovk_v2026.11.1_darwin_amd64.tar.gz"
+    sha256: "ccab21dbdb7bef4cecb410130584c127ef4b0af8e72dbed3254c3bc2942fdb3c"
+    bin: kubectl-ciscovk
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: "https://github.com/cisco-open/cisco-virtual-kubelet/releases/download/v2026.11.1/kubectl-ciscovk_v2026.11.1_darwin_arm64.tar.gz"
+    sha256: "5d5d089764073ae09cb412697aa14629a6af9be6700eb094bb81c3b28e7ef527"
+    bin: kubectl-ciscovk
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: "https://github.com/cisco-open/cisco-virtual-kubelet/releases/download/v2026.11.1/kubectl-ciscovk_v2026.11.1_linux_amd64.tar.gz"
+    sha256: "d849fb9551f0d1f0245fd3b74c0e16ee29daed262d436b6213583599509e600c"
+    bin: kubectl-ciscovk
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: "https://github.com/cisco-open/cisco-virtual-kubelet/releases/download/v2026.11.1/kubectl-ciscovk_v2026.11.1_linux_arm64.tar.gz"
+    sha256: "46b2e27afa9b79f5c67d4db86676a5a56660b4ba35409cb226ab5cef45cc82ba"
+    bin: kubectl-ciscovk

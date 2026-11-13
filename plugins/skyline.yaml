@@ -1,0 +1,48 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: skyline
+spec:
+  version: v0.1.5
+  homepage: https://github.com/zdk/kubectl-skyline
+  shortDescription: Explore the cluster as an interactive 3D space
+  description: |
+    kubectl skyline starts a local web server and renders the cluster as an
+    explorable 3D space: namespaces as floor plates, workloads and pods as
+    wireframe towers with container layers, services and ingresses as
+    floating markers, live events as sparks. Read-only; listens on loopback.
+  caveats: |
+    Needs a browser and a kubeconfig with list/watch access to pods,
+    workloads, services, ingresses, configmaps, secrets (metadata only), pvcs,
+    nodes, namespaces and events.
+  platforms:
+    - selector: {matchLabels: {os: linux, arch: amd64}}
+      uri: https://github.com/zdk/kubectl-skyline/releases/download/v0.1.5/kubectl-skyline_linux_amd64.tar.gz
+      sha256: 6235c2b29a14f61b2b65bbf0645f34035de2c5d02ad1c6bdc066d170ee50a248
+      bin: kubectl-skyline
+      files: [{from: kubectl-skyline, to: .}, {from: LICENSE, to: .}]
+    - selector: {matchLabels: {os: linux, arch: arm64}}
+      uri: https://github.com/zdk/kubectl-skyline/releases/download/v0.1.5/kubectl-skyline_linux_arm64.tar.gz
+      sha256: 8690875e24fa5b0916044a024d3a6546f2ca8447b36a79d301f3f277a78234f0
+      bin: kubectl-skyline
+      files: [{from: kubectl-skyline, to: .}, {from: LICENSE, to: .}]
+    - selector: {matchLabels: {os: darwin, arch: amd64}}
+      uri: https://github.com/zdk/kubectl-skyline/releases/download/v0.1.5/kubectl-skyline_darwin_amd64.tar.gz
+      sha256: f7ad727916e3ea9e9d93de15e559918587d019b55910c299f5604cf9a8ac19d5
+      bin: kubectl-skyline
+      files: [{from: kubectl-skyline, to: .}, {from: LICENSE, to: .}]
+    - selector: {matchLabels: {os: darwin, arch: arm64}}
+      uri: https://github.com/zdk/kubectl-skyline/releases/download/v0.1.5/kubectl-skyline_darwin_arm64.tar.gz
+      sha256: c5e8fd05731e60367c4217842fb42cfd568458260ccadc7c17bd69c3163f3298
+      bin: kubectl-skyline
+      files: [{from: kubectl-skyline, to: .}, {from: LICENSE, to: .}]
+    - selector: {matchLabels: {os: windows, arch: amd64}}
+      uri: https://github.com/zdk/kubectl-skyline/releases/download/v0.1.5/kubectl-skyline_windows_amd64.zip
+      sha256: 370ce1723b705ea87dcbb0b9a54880f5d9695bdc978429bb2890b0e4f3460bdc
+      bin: kubectl-skyline.exe
+      files: [{from: kubectl-skyline.exe, to: .}, {from: LICENSE, to: .}]
+    - selector: {matchLabels: {os: windows, arch: arm64}}
+      uri: https://github.com/zdk/kubectl-skyline/releases/download/v0.1.5/kubectl-skyline_windows_arm64.zip
+      sha256: bdb25ac201d492dad6d8becd0e4eeb60fb509e7743a9cd7c251e7c844ca6c446
+      bin: kubectl-skyline.exe
+      files: [{from: kubectl-skyline.exe, to: .}, {from: LICENSE, to: .}]

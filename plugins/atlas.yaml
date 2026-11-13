@@ -1,0 +1,75 @@
+# Krew plugin manifest for `kubectl atlas`.
+#
+# This is the manifest submitted to https://github.com/kubernetes-sigs/krew-index
+# so operators can `kubectl krew install atlas`. This file is the prepared source.
+#
+# `version` and the per-platform `uri` / `sha256` are filled in at
+# release time — goreleaser builds the kubectl-atlas_<ver>_<os>_<arch>
+# archives (.goreleaser.yml) and the checksums.txt that supplies the
+# sha256 values. Until the first tagged release they are placeholders.
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: atlas
+spec:
+  version: v1.6.0
+  homepage: https://github.com/lithastra/kubeatlas
+  shortDescription: Visualize Kubernetes resource dependencies
+  description: |
+    kubectl-atlas shows a KubeAtlas dependency graph for a resource,
+    a namespace, or the whole cluster.
+
+    By default it works offline: it builds the dependency graph
+    straight from the Kubernetes API and renders it to an SVG
+    locally, with no KubeAtlas server required. With --local-ui it
+    instead runs a KubeAtlas server in-process and opens the
+    interactive web UI — no graphviz and no in-cluster server. With
+    --online (or --server / KUBEATLAS_URL) it opens the live
+    KubeAtlas web UI in the cluster instead.
+
+    The plugin installs nothing in the cluster. Run
+    `kubectl atlas --help` for usage.
+  caveats: |
+    No in-cluster KubeAtlas server is needed for offline use.
+
+    Three modes:
+      (default)    Render a static SVG. Needs the graphviz
+                   `dot` tool on PATH.
+      --local-ui   Open an interactive web UI from an in-process
+                   server. No graphviz needed.
+      --online     Open a live in-cluster KubeAtlas UI (or pass
+                   --server / set KUBEATLAS_URL).
+
+    Run `kubectl atlas --help` for usage.
+    Docs: https://docs.kubeatlas.lithastra.com
+  platforms:
+    - selector:
+        matchLabels: { os: linux, arch: amd64 }
+      uri: https://github.com/lithastra/kubeatlas/releases/download/v1.6.0/kubectl-atlas_1.6.0_linux_amd64.tar.gz
+      sha256: "1d27f7aa2585f944dd6bf86bd9f49ba4cb324076531ecffff6d2bbf3d2c15aca"
+      bin: kubectl-atlas
+    - selector:
+        matchLabels: { os: linux, arch: arm64 }
+      uri: https://github.com/lithastra/kubeatlas/releases/download/v1.6.0/kubectl-atlas_1.6.0_linux_arm64.tar.gz
+      sha256: "fbf4e946f4dc142dc76e843893632d6453c6c6f13814a6c9bfb7f9cd87aa69bf"
+      bin: kubectl-atlas
+    - selector:
+        matchLabels: { os: darwin, arch: amd64 }
+      uri: https://github.com/lithastra/kubeatlas/releases/download/v1.6.0/kubectl-atlas_1.6.0_darwin_amd64.tar.gz
+      sha256: "c3ee07678a0028d76a2c43f7980445ef88788269069c45944cb2dda18d1b014e"
+      bin: kubectl-atlas
+    - selector:
+        matchLabels: { os: darwin, arch: arm64 }
+      uri: https://github.com/lithastra/kubeatlas/releases/download/v1.6.0/kubectl-atlas_1.6.0_darwin_arm64.tar.gz
+      sha256: "487d8ef9c8b03f6408b121c3804e9eec6baeef57a3da55572918954da2eb1cb2"
+      bin: kubectl-atlas
+    - selector:
+        matchLabels: { os: windows, arch: amd64 }
+      uri: https://github.com/lithastra/kubeatlas/releases/download/v1.6.0/kubectl-atlas_1.6.0_windows_amd64.tar.gz
+      sha256: "4eac49bdd9b13778beb1f7bb8653fdba1be341edffcfb367d1d5e469ba92e41b"
+      bin: kubectl-atlas.exe
+    - selector:
+        matchLabels: { os: windows, arch: arm64 }
+      uri: https://github.com/lithastra/kubeatlas/releases/download/v1.6.0/kubectl-atlas_1.6.0_windows_arm64.tar.gz
+      sha256: "547fb0d4406660340f1dd7ce6d52d77a3a70ddca56b16f89f1c40f7eb24adc4c"
+      bin: kubectl-atlas.exe

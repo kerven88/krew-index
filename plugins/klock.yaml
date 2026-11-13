@@ -1,0 +1,120 @@
+# SPDX-FileCopyrightText: 2023 Kalle Fagerberg
+#
+# SPDX-License-Identifier: CC0-1.0
+
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: klock
+spec:
+  version: v0.9.3
+  homepage: https://github.com/applejag/kubectl-klock
+  platforms:
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_linux_amd64.tar.gz
+    sha256: 2e7d0b9b44c6391b8cad90a87d1b3be5ea2a52dd9c5562bd05fe2183d9e5b714
+    files:
+    - from: "./kubectl-klock"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock"
+
+  - selector:
+      matchLabels:
+        os: linux
+        arch: "386"
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_linux_386.tar.gz
+    sha256: 84182a018569d6772034f4594495024e171be3c18f3bdbf4b2f5045a66023847
+    files:
+    - from: "./kubectl-klock"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock"
+
+  - selector:
+      matchLabels:
+        os: linux
+        arch: "arm64"
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_linux_arm64.tar.gz
+    sha256: 8dc0b6b193bcc0a1f151efad3e033a3d934ddbba94744d676c60c9d3200e45f5
+    files:
+    - from: "./kubectl-klock"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock"
+
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_darwin_amd64.tar.gz
+    sha256: 7a28f809d2a52e84b5c22d8ff3c69f4b3556b681fbae5c89ef583a3bb5c746f7
+    files:
+    - from: "./kubectl-klock"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock"
+
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_darwin_arm64.tar.gz
+    sha256: 0ad3da052ac415940397a8b036c2cf06ea745e7ae14925d22590d9736ae8c1a3
+    files:
+    - from: "./kubectl-klock"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock"
+
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_windows_amd64.zip
+    sha256: 1a28f3699e1c16357a34dbf5de1495dbb76b0ac8bb12cfa9d052c112ee2f451f
+    files:
+    - from: "/kubectl-klock.exe"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock.exe"
+
+  - selector:
+      matchLabels:
+        os: windows
+        arch: "386"
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_windows_386.zip
+    sha256: 349d89ff6ae604fdec168c1998677b24cb01570060c8e74d07a1fde69d35e7f4
+    files:
+    - from: "/kubectl-klock.exe"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock.exe"
+
+  - selector:
+      matchLabels:
+        os: windows
+        arch: arm64
+    uri: https://github.com/applejag/kubectl-klock/releases/download/v0.9.3/kubectl-klock_windows_arm64.zip
+    sha256: dc0e17650af751b132bec961c5c018312817cf66d1b810344d9001ec86b89ba0
+    files:
+    - from: "/kubectl-klock.exe"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-klock.exe"
+
+  shortDescription: Watches resources
+  description: |
+    Watches resources and prints them in a human-readable manner.
+    Very similar to `kubectl get`, but with live updates.

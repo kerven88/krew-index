@@ -1,0 +1,82 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: glance
+spec:
+  version: "v0.3.2"
+  homepage: https://gitlab.com/davidxarnold/glance
+  shortDescription: View cluster resource allocation and usage.
+  description: |
+    Glance is a kubectl plugin that displays cluster resource allocation and utilization.
+
+    It allows you to quickly view:
+    - Node resource allocation (CPU and memory)
+    - Pod resource requests and limits
+    - Cluster-wide totals
+    - Cloud provider node information (optional)
+
+    Features:
+    - Multiple output formats (text, pretty, JSON, charts)
+    - Human-readable and exact value display
+    - Label and field selectors
+
+    Usage:
+      kubectl glance                    # Default view
+      kubectl glance -o pretty          # Colored output
+      kubectl glance -o json            # JSON format
+      kubectl glance --selector tier=app # Filter by labels
+      kubectl glance -c                 # Include cloud provider info
+  caveats: |
+    This plugin requires kubectl 1.12 or higher.
+    For cloud provider information (--cloud-info), ensure proper cloud credentials are configured.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://gitlab.com/api/v4/projects/9502011/packages/generic/kubectl-glance/0.3.2/kubectl-glance-0.3.2-darwin-amd64.tar.gz
+    sha256: f3e592e051e5855b948b31c3602879222888ef2217929edd06716bdd3bde31ca
+    bin: kubectl-glance
+    files:
+    - from: "*"
+      to: "."
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://gitlab.com/api/v4/projects/9502011/packages/generic/kubectl-glance/0.3.2/kubectl-glance-0.3.2-darwin-arm64.tar.gz
+    sha256: 5410b3ca7587be19134d0624653b52f6c0ea8c050237b4e2700351160dab41b4
+    bin: kubectl-glance
+    files:
+    - from: "*"
+      to: "."
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://gitlab.com/api/v4/projects/9502011/packages/generic/kubectl-glance/0.3.2/kubectl-glance-0.3.2-linux-amd64.tar.gz
+    sha256: 1b34533c1fbbf97c94bcb6fa7e0f89a7c921b7a68995a6d31413e6b5c496ea8c
+    bin: kubectl-glance
+    files:
+    - from: "*"
+      to: "."
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://gitlab.com/api/v4/projects/9502011/packages/generic/kubectl-glance/0.3.2/kubectl-glance-0.3.2-linux-arm64.tar.gz
+    sha256: 1e46965cb9e484eb31879ebfa6fc9af25c9a9c7c735ed5b4126ffe91ea9fc93c
+    bin: kubectl-glance
+    files:
+    - from: "*"
+      to: "."
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    uri: https://gitlab.com/api/v4/projects/9502011/packages/generic/kubectl-glance/0.3.2/kubectl-glance-0.3.2-windows-amd64.tar.gz
+    sha256: a04d5218a873adb155d0c5590159fa8cedb6556781979888aecd582c93e036f2
+    bin: kubectl-glance.exe
+    files:
+    - from: "*"
+      to: "."

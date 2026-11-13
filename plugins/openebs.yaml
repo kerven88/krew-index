@@ -3,51 +3,44 @@ kind: Plugin
 metadata:
   name: openebs
 spec:
-  version: v0.4.0
-  homepage: https://github.com/openebs/openebsctl
-  shortDescription: View and debug OpenEBS storage resources
+  version: v4.6.2
+  homepage: https://openebs.io/docs/
+  shortDescription: Provides commands for OpenEBS engines.
   description: |
-    The openebs plugin provides a simplified interface to view
-    and debug different OpenEBS volumes and related storage resources.
-  caveats: |
-    * This plugin works with newer OpenEBS releases, where volumes are
-      provisioned by CSI.
-    * For resources that are not in default namespace, you must specify
-      -n/--namespace explicitly (the current namespace setting is not
-      yet used).
+    This plugin allows you to manage storage engines provided by OpenEBS.
   platforms:
   - selector:
       matchLabels:
         os: darwin
         arch: amd64
-    uri: https://github.com/openebs/openebsctl/releases/download/v0.4.0/kubectl-openebs_v0.4.0_Darwin_x86_64.tar.gz
-    sha256: 997932be5d25e174b7182231e9490b2c6390639aecb90574e8b0730abfdd8879
+    uri: https://github.com/openebs/openebs/releases/download/v4.6.2/kubectl-openebs-x86_64-apple-darwin.tar.gz
+    sha256: 6ceeaf37a58d83e13daaf8747fe17fc56ca763681b8dc315761e81d3104fc7e8
     bin: kubectl-openebs
   - selector:
       matchLabels:
         os: darwin
         arch: arm64
-    uri: https://github.com/openebs/openebsctl/releases/download/v0.4.0/kubectl-openebs_v0.4.0_Darwin_arm64.tar.gz
-    sha256: 18254b223cf4f8662199acbb39b9eabdf89c474677cf397f2ce6d0927ff0ac29
+    uri: https://github.com/openebs/openebs/releases/download/v4.6.2/kubectl-openebs-aarch64-apple-darwin.tar.gz
+    sha256: f2d0e970eae69c96c0ffb327322677f94e624ef8c1a1e956dea0aed99bd8fb18
     bin: kubectl-openebs
   - selector:
       matchLabels:
         os: linux
         arch: amd64
-    uri: https://github.com/openebs/openebsctl/releases/download/v0.4.0/kubectl-openebs_v0.4.0_Linux_x86_64.tar.gz
-    sha256: 9def138d1110b086af360ce0409e381d5ff084791de4199ddc1b31ebab37ea45
+    uri: https://github.com/openebs/openebs/releases/download/v4.6.2/kubectl-openebs-x86_64-linux-musl.tar.gz
+    sha256: 378f66b8d5ae775295da49e84c63107a6ab09e966fe8bf2f033a49671c16a0a6
     bin: kubectl-openebs
   - selector:
       matchLabels:
         os: linux
         arch: arm64
-    uri: https://github.com/openebs/openebsctl/releases/download/v0.4.0/kubectl-openebs_v0.4.0_Linux_arm64.tar.gz
-    sha256: 4a9714f03daa07180d5393b33c041de2d26184756538b56888b036e6d69619e6
+    uri: https://github.com/openebs/openebs/releases/download/v4.6.2/kubectl-openebs-aarch64-linux-musl.tar.gz
+    sha256: da1f3a8d1ba67ee2c9ea2786da2869de3191f3ec93f5b8632f288aac60a93e40
     bin: kubectl-openebs
   - selector:
       matchLabels:
         os: windows
         arch: amd64
-    uri: https://github.com/openebs/openebsctl/releases/download/v0.4.0/kubectl-openebs_v0.4.0_Windows_x86_64.zip
-    sha256: 5c4c0b0defd336fd2c63a63472900e6394ebe85e62c23e6c98453381b3274fc0
+    uri: https://github.com/openebs/openebs/releases/download/v4.6.2/kubectl-openebs-x86_64-windows-gnu.tar.gz
+    sha256: b2c8406e4697262f6d290df241b0fcad8982661efa518e32939d0bdab11500d1
     bin: kubectl-openebs.exe

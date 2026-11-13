@@ -1,0 +1,40 @@
+# krew plugin manifest for kubectl-aibom. Submitted to
+# kubernetes-sigs/krew-index after each release with version and
+# sha256 fields updated from the release assets (see
+# docs/release-checklist.md).
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: aibom
+spec:
+  version: "v1.6.2"
+  homepage: https://github.com/GoogleCloudPlatform/k8s-aibom
+  shortDescription: Read, summarize, and verify AIBOM resources
+  description: |
+    Companion CLI for k8s-aibom, the runtime AI/ML inventory
+    controller. Summarizes AI workload inventory (models, runtimes,
+    confidence tier, and signature verification state per workload),
+    displays the decoded CycloneDX ML-BOM document, and verifies
+    document integrity by recomputing its sha256 against the
+    published digest (non-zero exit on mismatch).
+  caveats: |
+    Requires the k8s-aibom controller and its AIBOM custom resources
+    installed in the target cluster (read-only get/list access is
+    enough).
+  platforms:
+    - selector: {matchLabels: {os: linux, arch: amd64}}
+      uri: https://github.com/GoogleCloudPlatform/k8s-aibom/releases/download/v1.6.2/kubectl-aibom_v1.6.2_linux_amd64.tar.gz
+      sha256: "5a7f7e98e55d59ce3f7e5fa9ce385b544775ddefd32bcdf20b6e9fc234b2a7c0"
+      bin: kubectl-aibom
+    - selector: {matchLabels: {os: linux, arch: arm64}}
+      uri: https://github.com/GoogleCloudPlatform/k8s-aibom/releases/download/v1.6.2/kubectl-aibom_v1.6.2_linux_arm64.tar.gz
+      sha256: "054bb6bad899ed4df8b4b9674f29c52ce7560833e8bb020fd13089b585811745"
+      bin: kubectl-aibom
+    - selector: {matchLabels: {os: darwin, arch: amd64}}
+      uri: https://github.com/GoogleCloudPlatform/k8s-aibom/releases/download/v1.6.2/kubectl-aibom_v1.6.2_darwin_amd64.tar.gz
+      sha256: "9b636e410f165cd2996a4b759f5178b0443e482d35d70ec9ce232f92bc1b99d0"
+      bin: kubectl-aibom
+    - selector: {matchLabels: {os: darwin, arch: arm64}}
+      uri: https://github.com/GoogleCloudPlatform/k8s-aibom/releases/download/v1.6.2/kubectl-aibom_v1.6.2_darwin_arm64.tar.gz
+      sha256: "af5765cdf21fc8f40593dc93aaaf32d2f1e91e079e32820e3b94457bcb7d2db3"
+      bin: kubectl-aibom

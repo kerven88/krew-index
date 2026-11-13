@@ -1,0 +1,51 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: gke-policy
+spec:
+  shortDescription: Validates GKE clusters configuration
+  homepage: https://github.com/google/gke-policy-automation
+  description: |
+    Tool and policy library for validating Google Kubernetes Engine clusters
+    against the configuration best practices and scalability limits.
+  caveats: |
+    The plugin requires Google Cloud credentials to work.
+    Use "gcloud auth application-default login" command to authenticate or
+    specify credentials file as an argument.
+  version: v1.4.8
+  platforms:
+    - bin: gke-policy
+      selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+      uri: https://github.com/google/gke-policy-automation/releases/download/v1.4.8/gke-policy-automation_v1.4.8_linux_amd64.zip
+      sha256: 01c7e073bdcfccd895055c3a8f6b7a542360d662a815851fac721291867888f1
+    - bin: gke-policy
+      selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+      uri: https://github.com/google/gke-policy-automation/releases/download/v1.4.8/gke-policy-automation_v1.4.8_linux_arm64.zip
+      sha256: dbdfe4429739216fb97e1bb31e93936633fe10e1d0c9822b4376d6ee4c009c90
+    - bin: gke-policy.exe
+      selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+      uri: https://github.com/google/gke-policy-automation/releases/download/v1.4.8/gke-policy-automation_v1.4.8_windows_amd64.zip
+      sha256: 1092e8a0fb926cbe55755e68b3c0434c644598306a5572c5bbcfb31632c2174b
+    - bin: gke-policy
+      selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/google/gke-policy-automation/releases/download/v1.4.8/gke-policy-automation_v1.4.8_darwin_amd64.zip
+      sha256: 9f9bbf2bb4df0c7f98ea96f4ec4fa5bfb303f6079039776d94846c84e9495bf1
+    - bin: gke-policy
+      selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/google/gke-policy-automation/releases/download/v1.4.8/gke-policy-automation_v1.4.8_darwin_arm64.zip
+      sha256: e76394f4f498cf0809ab43572fbecf0f1b90930f4dda62f575677ce78af819be

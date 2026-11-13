@@ -1,0 +1,29 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: curl
+spec:
+  version: v0.0.2
+  homepage: https://github.com/crabique/kubectl-curl
+  shortDescription: Make curl requests to in-cluster domains and IPs using system curl
+  description: |
+    This plugin allows using local curl binary to access
+    resources inside the cluster by their IPs or DNS.
+  caveats: |
+    Dependencies: curl
+  platforms:
+  - selector:
+      matchExpressions:
+      - key: os
+        operator: In
+        values:
+        - linux
+        - darwin
+    uri: https://github.com/crabique/kubectl-curl/releases/download/v0.0.2/kubectl-curl-v0.0.2.tar.gz
+    sha256: 58ed387eb91930117fe2e500d34f003d1b33f968d043de4ef89f211029372798
+    files:
+    - from: kubectl-curl
+      to: .
+    - from: LICENSE
+      to: .
+    bin: "./kubectl-curl"
